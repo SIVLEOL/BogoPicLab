@@ -109,12 +109,6 @@ public class BogoPicGenActivity extends Activity {
 			return;
 		}
 		
-		char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-		String ranStr = "";
-		for (int i = 0; i < 10; i++){
-			ranStr = ranStr + alphabet[(int)(Math.random() * 26)];
-		}
-		
 		try {	
 			if (intent.getExtras() != null) {
 				// TODO: If cancelled, show a toast, set result to RESULT_CANCELED, finish and return 
@@ -123,6 +117,12 @@ public class BogoPicGenActivity extends Activity {
 					setResult(RESULT_CANCELED);
 					finish();
 					return;
+				}
+				
+				char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+				String ranStr = "";
+				for (int i = 0; i < 10; i++){
+					ranStr = ranStr + alphabet[(int)(Math.random() * 26)];
 				}
 				
 				Intent strIntent = new Intent();
